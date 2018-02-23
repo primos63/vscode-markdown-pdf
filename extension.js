@@ -177,6 +177,23 @@ function convertMarkdownToHtml(filename) {
       return $.html();
     };
   }
+  
+  
+  // plantuml
+  md.use(require('markdown-it-plantuml'));
+
+  // fence plantuml should render with markdown-it-plantuml
+  // otherwise use the default renderer.
+  var defaultFenceRender = md.renderer.rules.fence;
+  md.renderer.rules.fence = function (tokens, idx, options, env, self) {
+    if (tokens[idx].info === 'plantuml') {
+      var plantuml = tokens[idx].content;
+      return md.render(plantuml);
+    }
+
+    // pass token to default fence renderer
+    return defaultFenceRender(tokens, idx, options, env, self);
+  }
 
   // checkbox
   md.use(require('markdown-it-checkbox'));

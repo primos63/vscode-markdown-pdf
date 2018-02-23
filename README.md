@@ -10,6 +10,7 @@ Supports the following features.
 * [Syntax highlighting](https://highlightjs.org/static/demo/)
 * [emoji](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
 * checkbox
+* [PlantUML](http://www.plantuml.com)
 
 ## Usage
 
@@ -145,6 +146,9 @@ Supports the following features.
 
 ## [Release Notes](https://github.com/yzane/vscode-markdown-pdf/blob/master/CHANGELOG.md)
 
+### 0.1.8 (2018/02/21)
+* Add: Feature allowing use of PlantUML in a markdown document.
+
 ### 0.1.7 (2017/04/05)
 * Change: Display completion message on status bar [#19](https://github.com/yzane/vscode-markdown-pdf/issues/19)
 * Add: markdown-pdf.convertOnSaveExclude option [#16](https://github.com/yzane/vscode-markdown-pdf/issues/16)
@@ -160,6 +164,7 @@ MIT
 
 
 ## Special thanks
+* [gmunguia/markdown-it-plantuml](https://github.com/gmunguia/markdown-it-plantuml)
 * [marcbachmann/node-html-pdf](https://github.com/marcbachmann/node-html-pdf)
 * [markdown-it/markdown-it](https://github.com/markdown-it/markdown-it)
 * [mcecot/markdown-it-checkbox](https://github.com/mcecot/markdown-it-checkbox)
